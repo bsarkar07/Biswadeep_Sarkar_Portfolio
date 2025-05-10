@@ -1,0 +1,937 @@
+/* Remembered variables and their values for future use */
+:root {
+    --lavendar: #5d5ce8;
+    --iceblue: #e0e7ff;
+    --graytext: #707485;
+    --lightgraytext: #b3bac1;
+}
+
+/*Llavendar #5d5ce8 */
+    /* ice blue #e0e7ff */
+    /* gray text #707485
+    light gray text #b3bac1 */
+body {
+        font-family: "Inter";
+        /* font-weight: bold; Made all fonts bold */
+        color: #545761; /* Changed font color to dark blue */
+    }
+
+.navbar{
+    padding-top: 1.5em;
+    position: fixed; /* Change to fixed to ensure it stays at the top */
+    top: 0;
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Ensure it stays above other elements */
+    background-color: #f8f9fa; /* Match the navbar background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visibility */
+    transition: opacity 0.5s ease-in-out; /* Add transition for fade-in effect */
+    opacity: 1; /* Default state */
+}
+.navbar-nav {
+    margin-left: auto; /* Push the navbar items to the right */
+    display: flex;
+    flex-direction: row; /* Ensure items are in a row */
+    align-items: center; /* Vertically align items */
+    gap: 1em; /* Add spacing between items */
+}
+
+.navbar-brand {
+    margin-right: 2em; /* Shifted the brand text more to the right */
+}
+
+    /* Updated the navbar toggler icon to use 'images/hamburg.png' when the navbar collapses. */
+
+.navbar-toggler-icon {
+    background-image: url("images/hamburg.png"); /* Updated hamburger icon */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+/* Updated navbar text styles to change color, increase font size, and font weight. */
+
+.nav-link {
+    font-size: 1.15rem; /* Increased font size */
+    font-weight: 500; /* Increased font weight */ /* Optional: Make text uppercase for better visibility */
+}
+
+.navbar-brand{
+    font-size: 1.5em;
+    font-weight: 550;
+    padding-left: 2em;
+}
+.nav-link {
+    color: #545761 !important; /* Changed navbar text color to black */
+    position: relative; /* For underline animation */
+    text-decoration: none; /* Remove default underline */
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Position underline slightly below the text */
+    left: 50%; /* Start underline in the middle */
+    width: 0; /* Initial width of the underline */
+    height: 2px; /* Thickness of the underline */
+    background-color: #5d5ce8; /* Updated underline color */
+    transform: translateX(-50%); /* Center the underline */
+    transition: width 0.3s ease-in-out; /* Smooth animation */
+}
+
+.nav-link:hover::after {
+    width: 50%; /* Short underline expands to 50% of the text width */
+}
+
+.nav-link:hover {
+    color: #3a3ac4 !important; /* Slightly darker shade on hover */
+}    
+
+/* ---------------------------------------------------- */
+/* Header section */
+.head-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;        justify-content: center; /* Align items in the middle vertically */
+    align-items: stretch; /* Align items in the middle horizontally */
+    gap: 3em;
+
+    background-color: #f8f9fa; /* light background */
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d3d3d3' fill-opacity='0.25'%3E%3Cpath d='M19 6v7h-7v2h7v7h2v-7h7v-2h-7V6h-2z'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+}
+
+.header-content-div{
+    display: flex;
+    justify-content: center; /* Align items in the middle vertically */
+    align-items: center;
+    gap: 5em;
+    padding-top: 4em;
+    margin-bottom: 5em;
+}
+
+.header-text-div{
+    margin-left: 4em;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text{
+    font-size: 2em;
+    max-width: 16em;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5em 1em; /* Add padding for a tag-like appearance */
+    font-size: 0.5em; 
+    font-weight: bold; /* Make the text bold */
+    color: #5d5ce8; /* Set text color */
+    background-color: #e0e7ff; /* Set background color */
+    border-radius: 50px; /* Fully rounded edges */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    text-align: center; /* Center the text */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.hi{
+    font-weight: 700;
+    font-size: 1.8em;
+    color: black;
+}
+
+.sde{
+    color: #000;
+    font-weight: 500;
+}
+
+.sde-desc{
+    margin-top: 1em;
+}
+
+.header-btn-div{
+    margin-top: 2em;
+}
+#header-btn {
+    border-radius: 15px; /* Add rounded edges */
+    background: linear-gradient(90deg, #3a3ac4, #6e6eb9); /* Made the gradient more prominent by using a darker shade */
+    color: white; /* Set text color */
+    padding: 0.5em 1em; /* Add padding for better appearance */
+    border: none; /* Remove default border */
+    font-size: 1em; /* Adjust font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: transform 0.2s ease-in-out; /* Smooth animation for pop-up effect */
+}
+
+#header-btn:hover {
+    background: linear-gradient(45deg, #4a4bd6, #2e2ea8); /* Add a darker shade to the gradient on hover */
+    transform: scale(1.1); /* Pop up the button on hover */
+}
+
+#landscape-img{
+    width: 130%; /* Ensure the image takes full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent the image from exceeding its container */
+    border-radius: 15px;
+}
+
+/* ------------------------------------ */
+/* About me section */
+
+.about-me-div{
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3em;
+
+    /* Slide-up animation for about-me-div */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Start slightly below */
+    transition: opacity 0.6s ease-out 0.3s, transform 0.6s ease-out 0.3s; /* Reduced delay to 0.3s */
+}
+
+.about-me-div.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+.about-me-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.about-me-heading p, .about-me-heading h5{
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    text-align: center;
+}
+
+.about-me-heading p{
+    color:#000;
+    font-size: 2.2em;
+    font-weight: 600;
+    position: relative; /* For underline positioning */
+}
+
+
+.about-me-heading p::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    left: 25%;
+    border-bottom: 3px solid var(--lavendar);
+}
+
+.about-me-content{
+    display: flex;
+    justify-content: left;
+    gap: 3em;
+    margin-left: 2em;
+}
+
+
+#about-me-img {
+    border-radius: 25px; /* Apply rounded edges */
+}
+
+.about-me-img-div img {
+    border-radius: 15px; /* Rounded edges */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More prominent shadow */
+}
+
+.about-me-text-div{
+    display: flex;
+    flex-direction: column;
+    align-items: left; 
+}
+
+.about-me-text-div p{
+    margin-right: 2em;
+    font-weight: 500;
+}
+
+.background{
+    font-size: 1.5em;
+    color: var(--lavendar);
+    font-weight: 600;
+}
+
+.achievement-cards-div{
+    display: flex;
+    justify-content: center; /* Align items in the middle vertically */
+    /* flex-wrap: wrap; */
+    /* flex-grow: 1; */
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.card {
+    max-width: 200px;
+    min-height: 245px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reduced shadow intensity */
+    text-align: center;
+    background-color: #fff;
+}
+
+.card:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Further intensify shadow on hover */
+    transform: scale(1.1); /* Slightly increase the size of the card */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth animation for both scaling and background color */
+    background-color: var(--lavendar); /* Apply the lavender background color */
+    color: white
+}
+
+.card img {
+    width: 50px; /* Made the image very small */
+    height: 50px; /* Adjusted height to match the small size */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin: 1em auto; /* Center the image within the card */
+    transition: none; /* Removed the zoom-in animation */
+}
+
+.card h5 {
+    font-size: 1rem; /* Reduced font size for the title */
+    margin: 0.5em 0;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 0.87rem; /* Reduced font size for the description */
+    margin: 0.5em;
+}
+
+/* -------------------------------------- */
+
+/* Projects Section */
+
+.projects-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    margin-top: 7em;
+    background-color: #f8f9fa;
+    padding-bottom: 4em;
+}
+    
+.projects-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4em;
+}
+
+.projects-heading h5, .projects-heading p{
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    text-align: center;
+}
+
+.projects-heading p{
+    color:#000;
+    font-size: 2.2em;
+    font-weight: 700;
+    position: relative; /* For underline positioning */
+}
+
+.projects-heading p::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    left: 25%;
+    border-bottom: 3px solid var(--lavendar);
+}
+
+.projects-heading h5{
+    margin-top: 1em;
+}
+
+.projects-row1, .projects-row2, .projects-row3{
+    display: flex;
+    justify-content: center; /* Align items in the middle vertically */
+    gap: 2em;
+}
+
+.project-card {
+    max-width: 400px;
+    /* min-width: 300px; */
+    min-height: 460px;
+    border: 1px solid #ccc;
+    border-radius: 12px; /* Increase rounding */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Adjusted fade-in animation for project-card with a delay */
+.project-card {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.6s ease-out 0.5s, transform 0.6s ease-out 0.5s; /* Added 0.5s delay */
+}
+
+.project-card.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+.project-card h4, .project-card p, .project-card a{
+    text-align: left; /* Align the title to the left */
+    margin-left: 1.5em;
+}
+
+.project-card h4{
+    margin-left: 0.9em;
+    margin-top: 1em;
+    color: #000;
+    font-weight: 600;
+}
+
+.project-card p{
+    width: 90%;
+}
+
+.project-card a{
+    color: var(--lavendar);
+    font-weight: 600;
+    font-size: 1em;
+}
+
+
+.project-card img {
+    width: 100%; /* Make the image cover the full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    transition: transform 0.3s ease-in-out; /* Smooth zoom-in animation */
+}
+
+.project-card img:hover {
+    transform: scale(1.1); /* Zoom in the image on hover */
+}
+
+/* ----------------------------- */
+/* Experiences Section */
+
+.experiences-div {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+/* Slide-in-from-left animation for experiences-div */
+.experiences-div {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Start slightly to the left */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth animation */
+}
+
+.experiences-div.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Move to original position */
+}
+
+.experiences-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4em;
+}
+
+.experiences-heading p, .experiences-heading h5{
+    text-align: center;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+.experiences-heading p{
+    color:#000;
+    font-size: 2.2em;
+    font-weight: 700;
+    position: relative; /* For underline positioning */
+}
+
+.experiences-heading p::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    left: 25%;
+    border-bottom: 3px solid var(--lavendar);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em 0; /* Add padding for better spacing */
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0; /* Move the line to the left */
+    transform: none; /* Remove centering transform */
+    width: 6px; /* Keep the line thickness */
+    height: 100%;
+    background: linear-gradient(to bottom, var(--lavendar), var(--iceblue)); /* Gradient line */
+    border-radius: 3px; /* Rounded edges */
+}
+
+.timeline-item {
+    position: relative;
+    margin: 3em 0; /* Spacing between items */
+    padding-left: 2em; /* Padding for text */
+    width: 100%; /* Full width for alignment */
+    text-align: left; /* Align text to the left */
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 0; /* Align the circle vertically on the line */
+    left: -3px; /* Center the circle on the line */
+    width: 12px; /* Circle size */
+    height: 12px; /* Circle size */
+    background-color: var(--lavendar); /* Circle color */
+    border-radius: 50%; /* Make it a circle */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 0.5em;
+}
+
+.timeline-content {
+    background-color: #f9f9f9;
+    padding: 1.5em; /* Add more padding for better spacing */
+    border-radius: 12px; /* Increase rounding */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhance shadow for better visibility */
+}
+
+.timeline-content p{
+    font-size: 1.2em;
+    color: var(--lavendar);
+    font-weight: 600;
+}
+
+#download-resume-btn{
+    margin-top: 1em;;
+    border-radius: 15px; /* Add rounded edges */
+    background: linear-gradient(90deg, #3a3ac4, #6e6eb9); /* Made the gradient more prominent by using a darker shade */
+    color: white; /* Set text color */
+    padding: 0.5em 1em; /* Add padding for better appearance */
+    border: none; /* Remove default border */
+    font-size: 1.1em; /* Adjust font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: transform 0.2s ease-in-out; /* Smooth animation for pop-up effect */
+}
+
+#download-resume-btn:hover {
+    background: linear-gradient(45deg, #4a4bd6, #2e2ea8); /* Add a darker shade to the gradient on hover */
+    transform: scale(1.1); /* Pop up the button on hover */
+}
+
+/* ------------------------------- */
+
+/* Skills section */
+
+.skills-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    margin-top: 4em;
+}
+
+.skills-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin-top: 4em;
+}
+
+.skills-heading p, .skills-heading h5{
+    text-align: center;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+.skills-heading p{
+    color:#000;
+    font-size: 2.2em;
+    font-weight: 700;
+    position: relative;
+}
+
+.skills-heading p::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    left: 25%;
+    border-bottom: 3px solid var(--lavendar);
+}
+
+.skills-cards-row{
+    display: flex;
+    justify-content: center; /* Align items in the middle vertically */
+    gap: 2em;
+    margin-top: 1em;
+}
+
+.skills-card {
+    max-width: 400px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    border-radius: 12px; /* Optional: Add rounded corners */
+    padding: 1em; /* Optional: Add padding for better spacing */
+    background-color: #fff; /* Optional: Ensure a consistent background */
+    padding-bottom: 1.5em;
+
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.6s ease-out 0.3s, transform 0.6s ease-out 0.3s; /* Added 0.3s delay */
+}
+
+.skills-card.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+.skills-card h4{
+    color: var(--lavendar);
+    text-align: center;
+    font-weight: 600;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(2, auto); /* Create 4 equal columns */
+    gap: 1em; /* Add spacing between grid items */
+    padding: 1em;
+}
+
+.grid-item {
+    background-color: #f8f9fa;
+    color: #545761;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    margin-top: 0.5em;
+}
+
+/* ------------------------------ */
+
+/* Get in Touch section */
+.get-in-touch-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    margin-top: 6em;
+    padding-bottom: 3em;
+    background-color: #f8f9fa;
+}
+
+/* Animation for get-in-touch-div */
+.get-in-touch-div {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.get-in-touch-div.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.get-in-touch-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4em;
+}
+
+.get-in-touch-heading h5, .get-in-touch-heading p{
+    text-align: center;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+.get-in-touch-heading p{
+    color:#000;
+    font-size: 2.2em;
+    font-weight: 700;
+    position: relative; /* For underline positioning */
+}
+.get-in-touch-heading p::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    left: 25%;
+    border-bottom: 3px solid var(--lavendar);
+}
+.get-in-touch-content-div{
+    display: flex;
+    justify-content: center; /* Align items in the middle vertically */
+    align-items: center; /* Align items in the middle horizontally */
+    gap: 9em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+/* Added slide-in-from-left animation to get-in-touch-content-div */
+.get-in-touch-content-div {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Start slightly to the left */
+    transition: opacity 0.6s ease-out 0.3s, transform 0.6s ease-out 0.3s; /* Reduced delay to 0.3s */
+}
+
+.get-in-touch-content-div.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Move to original position */
+}
+
+.get-in-touch-details-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    /* margin-right: 3em; */
+}
+
+.contact-info-heading{
+    color: black;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    position: relative; /* For underline positioning */
+}
+
+.get-in-touch-cards-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align items in the middle vertically */
+    gap: 2em;
+}
+
+.get-in-touch-card {
+    display: flex;
+    justify-content: left;
+    gap: 1em;
+    max-width: 400px;
+    /* flex-basis: 20% 80%; */
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 12px; /* Increase rounding */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    padding: 1em;
+    background-color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth animation for hover effect */
+}
+
+.get-in-touch-card:hover {
+    transform: scale(1.05); /* Slightly increase the size of the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a more prominent shadow */
+}
+
+.get-in-touch-card-img-div{
+    flex: 1;
+}
+
+.get-in-touch-card-text-div{
+    flex: 6;
+}
+
+.get-in-touch-card-img-div img{
+    width:80%;
+    max-width: 100%;
+    /* object-fit: cover; */
+}
+
+.get-in-touch-card-text-div p{
+    color: var(--lavendar);
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.contact-logos a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 1em;
+    margin-left: 0.5em;;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth animation for hover effect */
+}
+
+.contact-logos a img:hover {
+    transform: scale(1.1); /* Slightly increase the size of the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* -------------------------------------- */
+
+/* Making page responsive */
+
+@media screen and (max-width:450px){
+    .get-in-touch-img-div img{
+        display: none;
+    }
+    .get-in-touch-div{
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .project-card{
+        max-width: 320px;
+    }
+    
+    .skills-card{
+        max-width: 320px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-collapse {
+        display: none; /* Initially hide the dropdown */
+        flex-direction: column; /* Stack items vertically */
+        background-color: #f8f9fa; /* Match the navbar background */
+        padding: 1em; /* Add padding for better spacing */
+    }
+
+    .navbar-collapse.show {
+        display: flex; /* Show the dropdown when toggled */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 0.5em; /* Add spacing between items */
+    }
+
+    .navbar-toggler {
+        display: block; /* Ensure the toggler is visible on smaller screens */
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #landscape-img {
+        display: none;/* Maintain aspect ratio */
+    }
+    .header-text-div .header-text{
+        font-size: 1.5em; /* Reduce font size on smaller screens */
+        padding: 0 1em; /* Add padding for better readability */
+    }
+    .header-text-div #header-btn{
+        margin-left: 1.5em; /* Reduce font size on smaller screens */
+        /* padding: 0.5em 1em; Add padding for better readability */
+    }
+
+}
+
+@media screen and (max-width: 910px) {
+    .get-in-touch-content-div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Align items in the middle vertically */
+        gap: 5em;
+    }
+}
+
+@media screen and (max-width:1120px){
+
+    /* About Me Section */
+    #about-me-img{
+        width: 95%;
+        height: auto;
+    }
+
+    .about-me-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3em;
+        /* margin-left: 2em; */
+    }
+
+    .about-me-img-div{
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .about-me-text-div{
+        align-items: center;
+        width: 80%
+    }
+
+    .achievement-cards-div{
+        display: flex;
+        justify-content: center; /* Align items in the middle vertically */
+        flex-wrap: wrap;
+        /* flex-grow: 1; */
+        gap: 2em;
+        margin-top: 2em;
+    }
+
+    .achievement-cards-div p{
+        width: 90%;
+        text-align: center;
+    }
+/* -------------------------------------- */
+    
+    /* Projects Section */
+    .projects-row1, .projects-row2, .projects-row3{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Align items in the middle vertically */
+        gap: 2em;
+    }
+
+    .project-card{
+        max-width: 300;
+    }
+
+    /* -------------------------------------- */
+
+    /* Experiences Section */
+    
+    /* -------------------------------------- */
+
+    /* Skills Section */
+
+    .skills-cards-row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 2em;
+    }
+}
+
+.get-in-touch-img-div img {
+    border-radius: 25px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+

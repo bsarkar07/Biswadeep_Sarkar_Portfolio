@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biswadeep_Sarkar</title>
+        <!-- Bootstrap link -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- Bizz_home css -->
+        <link rel='stylesheet' href='Biswadeep_Sarkar2.css'>
+    
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="head-section">
+        <div id='navbar-div'>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#" style="color: #5d5ce8;">Portfolio.</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: #5d5ce8;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experiences-div">Experiences</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects-div">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://drive.google.com/file/d/1ihJgcoTnBDQhTxlrahkiTU8Yjy3s1Dyd/view?usp=sharing">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#get-in-touch-div">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="header-content-div">
+            <div class="header-text-div">
+                <div class="header-text">
+                    <p class="badge">Welcome to my Portfolio</p>
+                    <p class="hi">Hello, I'm </p>
+                    <p class="hi" style="color: #5d5ce8;">Biswadeep Sarkar</p>
+                    <h2 class="sde">Software Developer</h2>
+                    <h5 class="sde-desc">Specializing in leveraging modern technology stacks to create efficient, scalable solutions and driving continuous improvement.</h5>
+                </div>
+                <div class="header-btn-div">
+                    <button id="header-btn">Contact Me</button>
+                </div>
+                <!-- <h1 id="intro1">Hello!<br>I'm Biswadeep.</span></h1> -->
+                <!-- <img id="my-pic" src="images/My_pic.png" alt="Profile Picture" class="profile-pic"> -->
+            </div>
+
+            <div class="header-img">
+                <img id="landscape-img" src="images/laptop_desk.jpeg" alt="Image">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- About me section -->
+    <div class="about-me-div" id="about-me-div">
+        <div class="about-me-heading">
+            <p>About Me<p>
+            <h5>Get to know more about me, my background and what I do.</h5>
+        </div>
+        <div class="about-me-content">
+            <div class="about-me-img-div">
+                <img id="about-me-img" src="images/desk.jpg" alt="desk image">
+            </div>
+            <div class="about-me-text-div">
+                <p class="background">My background?</p>
+                <p>It includes an in-depth knowledge of algorithms, data
+                    structures, and system design — critical components in building reliable and
+                    high-performance software. 
+                <p>I have professional experience working with
+                    Python-based frameworks such as Django, and FastAPI, building RESTful
+                    APIs and microservices that are easy to maintain and scale.</p>
+                <p>Skilled at JavaScript and Express.js which allows me to contribute across
+                    the full stack.</p>
+                <div class="achievement-cards-div">
+                    <div class="card">
+                        <img class="card-img" src="images/robo.png" alt="Achievement 1">
+                        <h5>Automation Genius.</h5>
+                        <p>Automated scripts to cut down manual intervention <strong> by 60%. Achieved 95% </strong>successful server operations.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/dollar.png" alt="Achievement 2">
+                        <h5>Money whisperer.</h5>
+                        <p>Made software logic enhancements that prevented <strong>$100,000</strong> in
+                            erroneous payments 2 quarters.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/doc.png" alt="Achievement 3">
+                        <h5>Turning O(n²) into O(1).</h5>
+                        <p>Reduced server operations time by approximately <strong>80%</strong> and redesigned APIs to run <strong>100 to 1000 concurrent requests.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="projects-div" id="projects-div">
+        <div class="projects-heading">
+            <p>My Projects</p>
+            <h5>Explore my projects and what I'm pursuing at the moment.</h5>
+        </div>
+
+        <div class="projects-row1">
+            <div class="project-card">
+                <img src="images/smit2.png" alt="Project 1">
+                <h4>Smart Airpad</h4>
+                <p>Allows users to write in the air using finger gestures detected via webcam. 
+                    Hand movements are tracked with MediaPipe and a pre-trained neural network (MORAN) then recognizes the characters drawn.
+                </p>
+                <a href="https://drive.google.com/file/d/1BMrtChmdFcH4-6hXSSmTCDb8Dt8SUkH2/view?usp=sharing">View Report</a>
+            </div>
+            <div class="project-card">
+                <img src="images/smit2.png" alt="Project 2">
+                <h4>WAFT - Major Project</h4>
+                <p>WAFT or The WebLogic Advanced Feature Tool is created specifically for automating, handling, and
+managing WebLogic server operations and activities with accuracy and security, reducing human intervention.</p>
+                <a href="https://drive.google.com/file/d/1SvC-OQj2avjKmNOgywGlBzfzlA8TdEhr/view?usp=sharing">View Report</a>
+            </div>
+            <div class="project-card">
+                <img src="images/game_collage.png" alt="Project 3">
+                <h4>Classic 2D Games</h4>
+                <p>Created a collection of classic 2D games that blend fun and simplicity, recreating 
+                    nostalgic experiences with simple visuals and interactive gameplay. </p>
+                <a href="https://github.com/bsarkar07/project_locker/tree/main/games">View on Github</a>
+            </div>
+        </div>
+
+        <div class="projects-row2">
+            <div class="project-card">
+                <img src="images/portfolio.jpg" alt="Project 1">
+                <h4>Portfolio Website</h4>
+                <p>Showcases my skills, experience, and projects as a software developer. 
+                    With a responsive design and a clean layout, it enables visitors to explore my background and connect with me. </p>
+                <a href="#">View Website</a>
+            </div>
+            <div class="project-card">
+                <img src="images/weather.jpg" alt="Project 2">
+                <h4>Utilities Applications</h4>
+                <p>Utilities Applications: Weather Application that integrates real-time API 
+                    calls to display current conditions and forecasts; To-Do List Manager that implements CRUD operations with efficient 
+                    routing and state management.</p>
+                <a href="https://github.com/bsarkar07/project_locker/tree/main/utility_apps">View on Github</a>
+            </div>
+            <div class="project-card">
+                <img src="images/Efficient-Frontier.jpg" alt="Project 3">
+                <h4>Markowitz Efficient Frontier</h4>
+                <p>The Markowitz Efficient Frontier represents optimal investment portfolios offering the highest expected return for a given 
+                    risk level. Portfolios on the frontier are efficient; those below are suboptimal.</p>
+                <a href="https://github.com/bsarkar07/project_locker/tree/main/efficient_frontier_code">View on Github</a>
+            </div>
+        </div>
+
+        <div class="projects-row3">
+            <div class="project-card">
+                <img src="images/desk2.jpg" alt="Project 3">
+                <h4>In Progress ...</h4>
+                <p>Concepts and Technologies I'm currently pursuing:
+                <ul>
+                    <li>System Design (High-Level & Low-Level)</li>
+                    <li>Cloud Technologies: AWS, Kafka, Redis</li>
+                    <li>Automation with AI-tools</li>
+                    <li>React.Js</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experiences Section -->
+    <div class="experiences-div" id="experiences-div">
+        <div class="experiences-heading">
+            <p>Career Trajectory</p>
+            <h5>Explore which organizations I have been a part of.</h5>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">Aug 2023 - Feb 2025</div>
+                <div class="timeline-content">
+                    <p>Dell Technologies</p>
+                    <h6>Software Engineer 1</h6>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Jan 2023 - July 2023</div>
+                <div class="timeline-content">
+                    <p>Dell Technologies</p>
+                    <h6>Intern 2(Developer)</h6>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">June 2022 - Aug 2022</div>
+                <div class="timeline-content">
+                    <p>Dell Technologies</p>
+                    <h6>Intern 1(Developer)</h6>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Sept 2019 - Mar 2020</div>
+                <div class="timeline-content">
+                    <p>Untap'd</p>
+                    <h6>Research and Development Intern</h6>
+                </div>
+            </div>
+        </div>
+        <button id="download-resume-btn">Check Resume</button>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills-div" id="skills-div">
+        <div class="skills-heading">
+            <p>Technical Skills</p>
+            <h5>Explore my technical skills and what I bring to the table.</h5>
+        </div>
+        <div class="skills-cards-row">
+            <div class="skills-card">
+                <h4>Languages, Frameworks, DB</h4>
+                <div class="skills-grid">
+                    <div class="grid-item">Python</div>
+                    <div class="grid-item">Django, FastAPI</div>
+                    <div class="grid-item">JavaScript</div>
+                    <div class="grid-item">NodeJs, ExpressJs</div>
+                    <div class="grid-item">C++</div>
+                    <div class="grid-item">Bash Scripting</div>
+                    <div class="grid-item">SQL, Postgres</div>
+                    <div class="grid-item">NoSQL, Cassandra</div>
+                </div>
+            </div>
+            <div class="skills-card">
+                <h4>Core and Fundamentals</h4>
+                <div class="skills-grid">
+                    <div class="grid-item">Data Structures</div>
+                    <div class="grid-item">Algorithms</div>
+                    <div class="grid-item">System Design</div>
+                    <div class="grid-item">Agile</div>
+                    <div class="grid-item">MicroServices</div>
+                    <div class="grid-item">CI/CD</div>
+                    <div class="grid-item">OOP</div>
+                    <div class="grid-item">Operating Systems</div>
+                </div>
+            </div>
+            <div class="skills-card">
+                <h4>Cloud Technologies</h4>
+                <div class="skills-grid">
+                    <div class="grid-item">AWS EC2</div>
+                    <div class="grid-item">SQS & SNS</div>
+                    <div class="grid-item">Kafka</div>
+                    <div class="grid-item">Redis Q & Cache</div>
+                    <div class="grid-item">Zookeper</div>
+                    <div class="grid-item">Oracle WebLogic</div>
+                    <div class="grid-item">Docker</div>
+                    <div class="grid-item">Kubernetes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Get in touch Section -->
+    <div class="get-in-touch-div" id="get-in-touch-div">
+        <div class="get-in-touch-heading">
+            <p>Get in Touch<p>
+            <h5>I'm actively looking for full-time/contract opportunities.</h5>
+        </div>
+        <div class="get-in-touch-content-div">
+            <div class="get-in-touch-details-div">
+                <p class="contact-info-heading">Contact Information</p>
+                <div class="get-in-touch-cards-div">
+                    <div class="get-in-touch-card" id="email-card">
+                        
+                        <div class="get-in-touch-card-img-div">
+                            <img src="images/mail.png" alt="">
+                        </div>
+                        <div class="get-in-touch-card-text-div">
+                            <p>Email</p>
+                            <h6>sarkar.biswadeep07@gmail.com</h6>
+                        </div>
+                    </div>
+                    <div class="get-in-touch-card" id="phone-card">
+                        <div class="get-in-touch-card-img-div">
+                            <img src="images/phone-call.png" alt="">
+                        </div>
+
+                        <div class="get-in-touch-card-text-div">
+                            <p>Phone</p>
+                            <h6>(+91) 9007996311</h6>
+                        </div>
+                    </div>
+                    <div class="get-in-touch-card" id="location-card">
+                        <div class="get-in-touch-card-img-div">
+                            <img src="images/location-pin.png" alt="">
+                        </div>
+                        <div class="get-in-touch-card-text-div">
+                            <p>Location</p>
+                            <h6>Kolkata, India</h6>
+                        </div>
+                    </div>
+                    <div class="contact-logos">
+                        <a href="https://linkedin.com/in/bsarkar07"><img src="images/linkedin.png" alt=""></a>
+                        <a href="https://github.com/bsarkar07/project_locker/tree/main"><img src="images/Github.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="get-in-touch-img-div">
+                <img src="images/me.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="Biswadeep_Sarkar2.js" type="text/javascript"></script>
+</body>
+</html>
